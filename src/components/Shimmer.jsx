@@ -1,10 +1,9 @@
 function Shimmer() {
   return (
     <div>
-     {}
-      <div className="flex flex-wrap  justify-evenly flex-row">
-        
-      <div className=" bg-gray-200 w-[18vw] h-[50vh]  m-8 p-3 rounded-lg">
+      {}
+      <div className="flex flex-wrap  justify-evenly flex-row animate-pulse">
+        <div className=" bg-gray-200 w-[18vw] h-[50vh]  m-8 p-3 rounded-lg">
           <p className="w-full h-[25vh] bg-gray-300"></p>
 
           <h3 className="bg-gray-300 h-7  mt-2 w-3/4"> </h3>
@@ -47,7 +46,8 @@ function Shimmer() {
             <h3 className="bg-gray-300 w-1/3 h-7 mt-2"> </h3>
             <h3 className="bg-gray-300 w-1/3 h-7 mt-2"> </h3>
           </div>
-        </div><div className=" bg-gray-200 w-[18vw] h-[50vh]  m-8 p-3 rounded-lg">
+        </div>
+        <div className=" bg-gray-200 w-[18vw] h-[50vh]  m-8 p-3 rounded-lg">
           <p className="w-full h-[25vh] bg-gray-300"></p>
 
           <h3 className="bg-gray-300 h-7  mt-2 w-3/4"> </h3>
