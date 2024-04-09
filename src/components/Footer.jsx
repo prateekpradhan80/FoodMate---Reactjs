@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div>
-      <footer className="text-gray-600 bg-slate-300 shadow-xl body-font">
-        <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <footer className="text-gray-600 bg-slate-300 shadow-xl  body-font">
+        <div className="container px-5 py-8 mx-auto flex items-center  flex-row">
           <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"></a>
           <img src={logo} className="mr-12" />
           <Link to='/grocery' className="text-xl underline">Grocery</Link>

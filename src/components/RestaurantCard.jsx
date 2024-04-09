@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import RestaurantMenu from "./RestaurantMenu";
+import React, { useState, useContext } from "react";
+
 import { CDN_URL } from "../Utils/Constant";
+
 const RestaurantCard = (props) => {
   const { reslist } = props;
   /*const { cloudinaryImageId, areaName
@@ -37,7 +38,9 @@ export const withPromotedLabel = (RestaurantCard) => {
   return (props) => {
     return (
       <div>
-        <label className="absolute bg-slate-700 text-white px-4 rounded-md m-1">Veg</label>
+        <label className="absolute bg-slate-700 text-white px-4 rounded-md m-1">
+          Veg
+        </label>
         <RestaurantCard {...props} />
       </div>
     );

@@ -1,8 +1,10 @@
 import React from "react";
-
+import { UserContext } from "../Utils/UserContext";
+import { useContext } from "react";
 const About = () => {
+  const {theme}=useContext(UserContext)
   return (
-    <div className="flex ">
+    <div className={`flex bg-${theme}-500`} >
       <div className="flex ml-4 flex-col justify-center">
         <h1 className="text-5xl tracking-wide leading-relaxed font-serif animate-bounce">
         “One cannot think well, love well, sleep well, if one has not dined

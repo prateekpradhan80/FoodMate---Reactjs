@@ -3,7 +3,7 @@ import { useRouteError } from "react-router-dom";
 import error from "../assets/error.jpg";
 const Error = () => {
   const err = useRouteError();
-  console.log(err);
+   
   return (
     <div className=" flex  justify-center flex-col">
       <img className="w-[50vw] h-[70vh]" src={error} />
