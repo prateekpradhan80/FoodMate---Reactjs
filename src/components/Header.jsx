@@ -6,6 +6,7 @@ import { UserContext } from "../Utils/UserContext";
 import { MdDarkMode } from "react-icons/md";
 import { TiAdjustBrightness } from "react-icons/ti";
 import { useSelector } from "react-redux";
+import { FaCartShopping } from "react-icons/fa6";
 const Header = () => {
   const [auth, setAuth] = useState("LogIn");
   const { toggleTheme, theme } = useContext(UserContext);
@@ -20,7 +21,7 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   const cartItems = useSelector((store) => store.cart.items);
-console.log(cartItems);
+  console.log(cartItems);
   return (
     <div
       className={`flex justify-between mt-1 border-solid border-2 p-1 shadow-md bg-${theme}-500`}
@@ -62,7 +63,13 @@ console.log(cartItems);
               ContactUs
             </NavLink>
           </li>
-          <li className="mr-10 "> <Link to="/cart">Cart - {cartItems.length}</Link> </li>
+          <li className="mr-10 ">
+            {" "}
+            <Link to="/cart">
+              <p className="text-xl  font-bold absolute rounded-2xl px-1 top-2  ml-6 bg-blue-500">{cartItems.length}</p>
+              <FaCartShopping size={40} />
+            </Link>{" "}
+          </li>
           <div>
             <li className="  text-sm">
               Activity status {onlineStatus ? "✅" : "❌"}

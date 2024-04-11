@@ -11,7 +11,7 @@ const ItemList = ({ items }) => {
     dispatch(addItem(item));
   };
   return (
-    <div className="m-4">
+    <div className="m-4 ">
       {items.map((item) => (
         <div className="flex " key={item.card.info.id}>
           <div
