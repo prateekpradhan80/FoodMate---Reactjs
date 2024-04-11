@@ -5,6 +5,7 @@ import useOnlineStatus from "../Utils/useOnlineStatus";
 import { UserContext } from "../Utils/UserContext";
 import { MdDarkMode } from "react-icons/md";
 import { TiAdjustBrightness } from "react-icons/ti";
+import { useSelector } from "react-redux";
 const Header = () => {
   const [auth, setAuth] = useState("LogIn");
   const { toggleTheme, theme } = useContext(UserContext);
@@ -17,6 +18,9 @@ const Header = () => {
     }
   }
   const onlineStatus = useOnlineStatus();
+
+  const cartItems = useSelector((store) => store.cart.items);
+console.log(cartItems);
   return (
     <div
       className={`flex justify-between mt-1 border-solid border-2 p-1 shadow-md bg-${theme}-500`}
@@ -58,14 +62,14 @@ const Header = () => {
               ContactUs
             </NavLink>
           </li>
-          <li className="mr-10 ">Cart</li>
+          <li className="mr-10 "> <Link to="/cart">Cart - {cartItems.length}</Link> </li>
           <div>
             <li className="  text-sm">
               Activity status {onlineStatus ? "✅" : "❌"}
             </li>
             {theme == "white" ? (
               <button className="text-3xl" onClick={toggleTheme}>
-                <MdDarkMode  />{" "}
+                <MdDarkMode />{" "}
               </button>
             ) : (
               <button className="text-3xl" onClick={toggleTheme}>

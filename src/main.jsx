@@ -8,6 +8,7 @@ import About from "./components/About.jsx";
 import Contact from "./components/Contact.jsx";
 import Error from "./components/Error.jsx";
 import RestaurantMenu from "./components/RestaurantMenu.jsx";
+import Cart from "./components/Cart.jsx";
 
 const Grocery = lazy(() => import("./components/Grocery.jsx"));
 
@@ -40,6 +41,9 @@ const router = createBrowserRouter([
       {
         path: "/restaurant/:resId",
         element: <RestaurantMenu />,
+      },{
+        path:"/cart",
+        element:<Cart/>,
       },
     ],
   },
